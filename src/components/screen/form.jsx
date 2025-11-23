@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export function AddForm({ handleSave, medicoEditado }) {
+export function AddForm({ handleSave, medicoEditado, onChangeForm }) {
   const CLEAN_STATE = {
     id: null,
     nome: "",
@@ -94,6 +94,8 @@ export function AddForm({ handleSave, medicoEditado }) {
       ...prevData,
       nome: textoCapitalizado,
     }));
+
+    if (onChangeForm) onChangeForm();
   }
 
   function handleEspecialidadeChange({ target }) {
@@ -105,6 +107,8 @@ export function AddForm({ handleSave, medicoEditado }) {
       ...prevData,
       especialidade: textoCapitalizado,
     }));
+
+    if (onChangeForm) onChangeForm();
   }
 
   function capitalizacaoAutomatica(texto) {
@@ -132,6 +136,8 @@ export function AddForm({ handleSave, medicoEditado }) {
       ...prevData,
       telefone: valorNumerico,
     }));
+
+    if (onChangeForm) onChangeForm();
   }
 
   function handleValorConsultaChange({ target }) {
@@ -158,6 +164,8 @@ export function AddForm({ handleSave, medicoEditado }) {
       ...prevData,
       valorConsulta: valorFinal,
     }));
+
+    if (onChangeForm) onChangeForm();
   }
 
   return (
@@ -209,17 +217,15 @@ export function AddForm({ handleSave, medicoEditado }) {
           />
         </div>
         <div>
-          <input
-            className="submit-button"
-            type="submit"
-            value="Salvar"
-          />
+          <input className="submit-button" type="submit" value="Salvar" />
           <button className="reset-button" type="button" onClick={handleReset}>
             Limpar
           </button>
         </div>
       </form>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      {
+        // <pre>{JSON.stringify(data, null, 2)}</pre> 
+      } 
     </>
   );
 }

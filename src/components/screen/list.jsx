@@ -1,4 +1,9 @@
-export function ListMedicos({ medicos = [], handleDelete, handleEdit }) {
+export function ListMedicos({
+  medicos = [],
+  handleDelete,
+  handleEdit,
+  showActions = false,
+}) {
   if (medicos.length === 0) return null;
 
   return (
@@ -13,6 +18,7 @@ export function ListMedicos({ medicos = [], handleDelete, handleEdit }) {
             {...medico}
             handleDelete={handleDelete}
             handleEdit={handleEdit}
+            showActions={showActions}
           />
         ))}
       </div>
@@ -28,6 +34,7 @@ function Item({
   valorConsulta,
   handleDelete,
   handleEdit,
+  showActions,
 }) {
   function onDelete() {
     handleDelete?.(id);
@@ -59,18 +66,25 @@ function Item({
         <h3 className="item-nome">{nome}</h3>
         <div className="item-details">
           <span className="item-especialidade">{especialidade}</span>
-          <span className="item-telefone">{telefone ? formatarTelefone(telefone) : "N/A"}</span>
-          <span className="item-valor">{valorConsulta ? `R$ ${valorConsulta.toFixed(2)}` : "N/A"}</span>
+          <span className="item-telefone">
+            {telefone ? formatarTelefone(telefone) : "N/A"}
+          </span>
+          <span className="item-valor">
+            {valorConsulta ? `R$ ${valorConsulta.toFixed(2)}` : "N/A"}
+          </span>
         </div>
       </div>
-      <div className="item-actions">
-        <button className="edit-button" onClick={onEdit}>
-          Editar
-        </button>
-        <button className="delete-button" onClick={onDelete}>
-          Excluir
-        </button>
-      </div>
+
+      {showActions && (
+        <div className="item-actions">
+          <button className="edit-button" onClick={onEdit}>
+            Editar
+          </button>
+          <button className="delete-button" onClick={onDelete}>
+            Excluir
+          </button>
+        </div>
+      )}
     </div>
   );
 }

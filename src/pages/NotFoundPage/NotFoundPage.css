@@ -1,0 +1,21 @@
+.not-found-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.not-found-title {
+  font-size: 72px;
+  margin-bottom: 20px;
+}
+
+.not-found-subtitle {
+  margin-bottom: 10px;
+}
+
+.not-found-text {
+  margin-bottom: 20px;
+}
+
+.not-found-button {
+  margin-top: 20px;
+}

@@ -1,0 +1,20 @@
+.header-buttons {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.mensagem-sucesso {
+  background: #38ef7d;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mensagem-erro {
+  background: #f5576c;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+

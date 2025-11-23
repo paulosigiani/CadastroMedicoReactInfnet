@@ -1,0 +1,23 @@
+.home-content {
+  text-align: center;
+}
+
+.home-title {
+  margin-bottom: 10px;
+}
+
+.home-description {
+  margin-bottom: 20px;
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: stretch;
+  margin-top: 20px;
+}
+
+.menu-buttons .submit-button {
+  width: 100%; 
+}
