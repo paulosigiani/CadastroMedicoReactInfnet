@@ -19,7 +19,7 @@ export function AddForm({ handleSave, medicoEditado }) {
     if (medicoEditado) {
       setData(medicoEditado);
 
-      const telefoneInput = { value: String(medicoEditado.telefone) };
+      const telefoneInput = { value: medicoEditado.telefone };
       handleTelefoneChange({ target: telefoneInput });
 
       const valorInput = {

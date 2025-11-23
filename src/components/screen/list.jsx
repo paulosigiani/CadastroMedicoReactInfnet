@@ -34,7 +34,7 @@ function Item({
   }
 
   function onEdit() {
-    handleEdit?.({id, nome, especialidade, telefone, valorConsulta});
+    handleEdit?.(id);
     window.scrollTo(0, 0);
   }
 

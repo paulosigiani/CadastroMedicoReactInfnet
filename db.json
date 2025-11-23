@@ -1,0 +1,25 @@
+{
+  "medicos": [
+    {
+      "id": "1",
+      "nome": "Dr. João Silva",
+      "especialidade": "Cardiologia",
+      "telefone": "21987654321",
+      "valorConsulta": 580
+    },
+    {
+      "nome": "Dra. Maria Oliveira",
+      "especialidade": "Pediatria",
+      "telefone": "21912345678",
+      "valorConsulta": 450,
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "nome": "Dr. Carlos Souza",
+      "especialidade": "Ortopedia",
+      "telefone": "21999887766",
+      "valorConsulta": 600
+    }
+  ]
+}
